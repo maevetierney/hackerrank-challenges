@@ -1,4 +1,3 @@
-# Hackerrank-Challenges
+# Practice Questions for Interviews 
 
-- Coding practice for interviews.
-- All problems can be found on www.hackerrank.com.
+- All problems can be found on www.hackerrank.com or www.interviewcake.com. 
