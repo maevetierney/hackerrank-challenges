@@ -14,7 +14,7 @@
 
 ########################
 
-#Psuedocode: 
+#Psuedocode:
   #A left rotation operation on an array of size shifts each of the arrays elements  unit to the left.
 
   #For example, if 2 left rotations are performed on array [1,2,3,4,5] , then the array would become [3,4,5,1,2].
