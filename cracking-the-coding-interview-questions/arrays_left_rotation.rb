@@ -33,17 +33,42 @@
 ########################
 
 #First Draft Experimentation
-array_of_n_integers = [1,2,3,4,5]
-n = array_of_n_integers
-number_of_rotations = 0
-d = number_of_rotations
 
+# def left_rotations(number_of_rotations)
+#   array_of_n_integers = [1,2,3,4,5]
+#
+#   #D will become the number of 0's we are going to inject into the beginning of this array.
+#   number_of_rotations.times do
+#     array_of_n_integers.unshift(0)
+#   end
+#
+#   #drop those 0's you added in (hint: its the first D number of indicies)
+#   array_of_n_integers.reject! {|num| num == 0}
+#   #this also returns the new array
+# end
+#
+# left_rotations(3)
+
+########################
+
+#Second Draft really going for the answer
 def left_rotations(number_of_rotations)
-  #D will become the number of 0's we are going to inject into the beginning of this array.
-  number_of_rotations.times do
-    array_of_n_integers.unshift(0)
+  array_of_n_integers = [1,2,3,4,5]
+  current_indx = 0
+
+  until current_indx == number_of_rotations
+      #take first index's VALUE from the array
+        index_to_be_switched = array_of_n_integers[0]
+      #delete the first index's from the beginning of the array
+        array_of_n_integers.shift
+      #push current_indx to the end of the array
+        array_of_n_integers << index_to_be_switched
+      #increase rotation to next integer
+      current_indx += 1
   end
-  #drop those 0's you added in (hint: its the first D number of indicies)
-  array_of_n_integers.reject {|num| num < 1}
-  #this also returns the new array 
+
+  p array_of_n_integers
+
 end
+
+left_rotations(4)
